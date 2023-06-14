@@ -1,0 +1,7 @@
+@import './../../style/mixins.scss';
+
+main {
+  @include flex(column, flex-start, center);
+  overflow: hidden;
+  flex-grow: 1;
+}

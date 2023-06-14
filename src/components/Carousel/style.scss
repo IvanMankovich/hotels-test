@@ -1,0 +1,41 @@
+@import './../../style/mixins.scss';
+@import './../../style/variables.scss';
+
+.carousel {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  height: 100%;
+
+  &__button {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 4rem;
+    z-index: 1;
+    border: none;
+    background-color: $btn-bckg;
+    @include addTransitionForProp(all);
+    color: $btn-text;
+
+    &:hover {
+      background-color: $btn-bckg-hover;
+      color: $btn-text-hover;
+    }
+
+    &-left {
+      left: 0;
+    }
+
+    &-right {
+      right: 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+}

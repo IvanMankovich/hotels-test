@@ -1,0 +1,10 @@
+@import './../../style/mixins.scss';
+@import './../../style/variables.scss';
+
+.hotelCard {
+  @include flex(column, flex-start, center);
+  border: $border;
+  border-radius: $b-rad;
+  width: 100%;
+  max-width: 54rem;
+}

@@ -1,0 +1,16 @@
+@import './../../style/mixins.scss';
+@import './../../style/variables.scss';
+
+footer {
+  width: 100%;
+  height: $footer-h;
+  border: $border;
+  border-radius: $b-rad;
+  @include flex(row, space-between, stretch);
+  background-color: $module-bckg;
+  margin-top: $module-m;
+
+  p {
+    margin: 0 0 0 auto;
+  }
+}

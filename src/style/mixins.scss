@@ -1,0 +1,24 @@
+@mixin flex($flexDirection, $justifyContent, $alignItems) {
+  display: flex;
+  @if $flexDirection {
+    flex-direction: $flexDirection;
+  }
+  @if $justifyContent {
+    justify-content: $justifyContent;
+  }
+  @if $alignItems {
+    align-items: $alignItems;
+  }
+}
+
+@mixin addTransitionForProp($properties...) {
+  $transition: ();
+  @each $property in $properties {
+    $transition: append($transition, ($property 0.2s ease-in-out), $separator: comma);
+  }
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}

@@ -1,0 +1,29 @@
+@import './../../style/mixins.scss';
+@import './../../style/variables.scss';
+
+.starRating {
+  & > *:not(:first-child) {
+    margin-left: 0.2rem;
+  }
+
+  &__button {
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: $btn-bckg;
+    @include addTransitionForProp(all);
+    color: $btn-text;
+
+    &:hover {
+      background-color: $btn-bckg-hover;
+      color: $btn-text-hover;
+    }
+
+    &:disabled {
+      background-color: transparent;
+      cursor: initial;
+      color: $btn-text;
+    }
+  }
+}

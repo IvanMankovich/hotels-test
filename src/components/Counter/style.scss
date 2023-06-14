@@ -1,0 +1,37 @@
+@import './../../style/mixins.scss';
+@import './../../style/variables.scss';
+
+.counter {
+  @include flex(row, center, center);
+
+  span {
+    font-weight: bold;
+  }
+
+  &__button {
+    border: none;
+    height: $star-btn-h;
+    width: $star-btn-w;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: $btn-bckg;
+    @include addTransitionForProp(all);
+
+    &-left {
+      margin-right: $star-btn-m;
+    }
+
+    &-right {
+      margin-left: $star-btn-m;
+    }
+
+    &:hover {
+      background-color: $btn-bckg-hover;
+    }
+
+    &:disabled {
+      background-color: $btn-bckg;
+      cursor: initial;
+    }
+  }
+}

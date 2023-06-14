@@ -1,0 +1,47 @@
+@import './../../../style/mixins.scss';
+@import './../../../style/variables.scss';
+
+.hotelCard__header {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  padding: $card-p;
+
+  .header {
+    &__carousel {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: $b-rad;
+      overflow: hidden;
+    }
+
+    &__mainInfo,
+    &__starRating {
+      margin-top: $card-p;
+      width: 100%;
+    }
+  }
+
+  @media only screen and (min-width: 640px) {
+    flex-direction: row;
+    align-items: flex-start;
+
+    & > .header {
+      &__carousel {
+        min-width: $card-l-cont-w;
+        width: $card-l-cont-w;
+      }
+
+      &__mainInfo,
+      &__starRating {
+        margin-top: $card-p;
+        width: auto;
+        margin-top: 0;
+        margin-left: $card-p;
+      }
+
+      &__starRating {
+        margin-left: auto;
+      }
+    }
+  }
+}

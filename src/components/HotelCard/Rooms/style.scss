@@ -1,0 +1,25 @@
+@import './../../../style/mixins.scss';
+@import './../../../style/variables.scss';
+
+.roomsList {
+  @include flex(column, flex-start, stretch);
+}
+
+.room {
+  @include flex(column, flex-start, stretch);
+  border-top: $border;
+  padding: $card-p;
+
+  @media only screen and (min-width: 640px) {
+    flex-direction: row;
+
+    &__mainInfo {
+      min-width: $card-l-cont-w;
+      width: $card-l-cont-w;
+    }
+
+    &__addInfo {
+      margin-left: $card-p;
+    }
+  }
+}

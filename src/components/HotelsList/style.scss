@@ -1,0 +1,15 @@
+@import './../../style/mixins.scss';
+@import './../../style/variables.scss';
+
+.hotelsList {
+  @include flex(column, flex-start, center);
+  padding: 0 0.5rem;
+
+  @media only screen and (min-width: 640px) {
+    padding: 0;
+  }
+
+  & > *:not(:first-child) {
+    margin-top: $card-p;
+  }
+}
